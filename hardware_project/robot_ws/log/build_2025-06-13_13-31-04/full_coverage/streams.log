@@ -1,0 +1,20 @@
+[3.126s] Invoking command in '/home/samah/robot_ws/build/full_coverage': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/full_coverage/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/full_coverage/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/full_coverage/build --no-deps symlink_data
+[4.344s] running develop
+[4.948s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[4.949s]   self.local_index = Environment(self.shadow_path + sys.path)
+[5.063s] running egg_info
+[5.169s] writing full_coverage.egg-info/PKG-INFO
+[5.169s] writing dependency_links to full_coverage.egg-info/dependency_links.txt
+[5.170s] writing entry points to full_coverage.egg-info/entry_points.txt
+[5.170s] writing requirements to full_coverage.egg-info/requires.txt
+[5.170s] writing top-level names to full_coverage.egg-info/top_level.txt
+[5.320s] reading manifest file 'full_coverage.egg-info/SOURCES.txt'
+[5.322s] writing manifest file 'full_coverage.egg-info/SOURCES.txt'
+[5.400s] running build_ext
+[5.400s] Creating /home/samah/robot_ws/install/full_coverage/lib/python3.12/site-packages/full-coverage.egg-link (link to .)
+[5.401s] Installing coverage_planner script to /home/samah/robot_ws/install/full_coverage/lib/full_coverage
+[5.402s] Installing visual script to /home/samah/robot_ws/install/full_coverage/lib/full_coverage
+[5.402s] 
+[5.402s] Installed /home/samah/robot_ws/build/full_coverage
+[5.403s] running symlink_data
+[5.471s] Invoked command in '/home/samah/robot_ws/build/full_coverage' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/full_coverage/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/full_coverage/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/full_coverage/build --no-deps symlink_data

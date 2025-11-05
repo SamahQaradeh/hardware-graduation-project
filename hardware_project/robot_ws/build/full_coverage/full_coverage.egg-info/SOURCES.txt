@@ -1,0 +1,15 @@
+package.xml
+setup.cfg
+setup.py
+full_coverage/__init__.py
+full_coverage/coverage_planner.py
+full_coverage/visualizer.py
+full_coverage.egg-info/PKG-INFO
+full_coverage.egg-info/SOURCES.txt
+full_coverage.egg-info/dependency_links.txt
+full_coverage.egg-info/entry_points.txt
+full_coverage.egg-info/requires.txt
+full_coverage.egg-info/top_level.txt
+full_coverage.egg-info/zip-safe
+launch/nav_client.launch.py
+resource/full_coverage

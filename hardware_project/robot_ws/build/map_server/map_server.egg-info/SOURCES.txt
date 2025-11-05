@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+config/room_area.pgm
+config/room_area.yaml
+launch/nav2_map_server.launch.py
+map_server/__init__.py
+map_server.egg-info/PKG-INFO
+map_server.egg-info/SOURCES.txt
+map_server.egg-info/dependency_links.txt
+map_server.egg-info/requires.txt
+map_server.egg-info/top_level.txt
+map_server.egg-info/zip-safe
+resource/map_server

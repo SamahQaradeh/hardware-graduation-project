@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+config/amcl_config.yaml
+launch/localization.launch.py
+localization_server/__init__.py
+localization_server.egg-info/PKG-INFO
+localization_server.egg-info/SOURCES.txt
+localization_server.egg-info/dependency_links.txt
+localization_server.egg-info/entry_points.txt
+localization_server.egg-info/requires.txt
+localization_server.egg-info/top_level.txt
+localization_server.egg-info/zip-safe
+resource/localization_server

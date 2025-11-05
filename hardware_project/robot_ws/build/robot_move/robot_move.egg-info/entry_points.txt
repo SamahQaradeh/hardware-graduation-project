@@ -1,0 +1,6 @@
+[console_scripts]
+obstacle_detector = robot_move.robot_move:main
+read_imu_exe = robot_move.read_imu_from_ard:main
+read_vel_exe = robot_move.read_vel_from_ard:main
+send_point = robot_move.send_point_to_point:main
+send_vel_exe = robot_move.send_vel_to_ard:main

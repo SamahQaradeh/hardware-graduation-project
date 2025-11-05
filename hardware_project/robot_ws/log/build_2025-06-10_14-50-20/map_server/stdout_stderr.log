@@ -1,0 +1,27 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+  self.local_index = Environment(self.shadow_path + sys.path)
+running egg_info
+creating map_server.egg-info
+writing map_server.egg-info/PKG-INFO
+writing dependency_links to map_server.egg-info/dependency_links.txt
+writing requirements to map_server.egg-info/requires.txt
+writing top-level names to map_server.egg-info/top_level.txt
+writing manifest file 'map_server.egg-info/SOURCES.txt'
+reading manifest file 'map_server.egg-info/SOURCES.txt'
+writing manifest file 'map_server.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/samah/robot_ws/install/map_server/lib/python3.12/site-packages/map-server.egg-link (link to .)
+
+Installed /home/samah/robot_ws/build/map_server
+running symlink_data
+creating /home/samah/robot_ws/install/map_server/share/map_server/launch
+symbolically linking /home/samah/robot_ws/build/map_server/launch/nav2_map_server.launch.py -> /home/samah/robot_ws/install/map_server/share/map_server/launch
+creating /home/samah/robot_ws/install/map_server/share/map_server/config
+symbolically linking /home/samah/robot_ws/build/map_server/config/room_area.yaml -> /home/samah/robot_ws/install/map_server/share/map_server/config
+symbolically linking /home/samah/robot_ws/build/map_server/config/room_area.pgm -> /home/samah/robot_ws/install/map_server/share/map_server/config
+creating /home/samah/robot_ws/install/map_server/share/ament_index
+creating /home/samah/robot_ws/install/map_server/share/ament_index/resource_index
+creating /home/samah/robot_ws/install/map_server/share/ament_index/resource_index/packages
+symbolically linking /home/samah/robot_ws/build/map_server/resource/map_server -> /home/samah/robot_ws/install/map_server/share/ament_index/resource_index/packages
+symbolically linking /home/samah/robot_ws/build/map_server/package.xml -> /home/samah/robot_ws/install/map_server/share/map_server

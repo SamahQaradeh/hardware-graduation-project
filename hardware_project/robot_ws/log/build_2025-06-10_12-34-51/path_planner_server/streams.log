@@ -1,0 +1,32 @@
+[2.941s] Invoking command in '/home/samah/robot_ws/build/path_planner_server': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/path_planner_server/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/path_planner_server/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/path_planner_server/build --no-deps symlink_data
+[4.084s] running develop
+[4.645s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[4.645s]   self.local_index = Environment(self.shadow_path + sys.path)
+[4.766s] running egg_info
+[4.766s] creating path_planner_server.egg-info
+[4.860s] writing path_planner_server.egg-info/PKG-INFO
+[4.860s] writing dependency_links to path_planner_server.egg-info/dependency_links.txt
+[4.861s] writing requirements to path_planner_server.egg-info/requires.txt
+[4.861s] writing top-level names to path_planner_server.egg-info/top_level.txt
+[4.861s] writing manifest file 'path_planner_server.egg-info/SOURCES.txt'
+[4.992s] reading manifest file 'path_planner_server.egg-info/SOURCES.txt'
+[4.993s] writing manifest file 'path_planner_server.egg-info/SOURCES.txt'
+[5.066s] running build_ext
+[5.066s] Creating /home/samah/robot_ws/install/path_planner_server/lib/python3.12/site-packages/path-planner-server.egg-link (link to .)
+[5.067s] 
+[5.067s] Installed /home/samah/robot_ws/build/path_planner_server
+[5.068s] running symlink_data
+[5.068s] creating /home/samah/robot_ws/install/path_planner_server/share/ament_index
+[5.068s] creating /home/samah/robot_ws/install/path_planner_server/share/ament_index/resource_index
+[5.069s] creating /home/samah/robot_ws/install/path_planner_server/share/ament_index/resource_index/packages
+[5.069s] symbolically linking /home/samah/robot_ws/build/path_planner_server/resource/path_planner_server -> /home/samah/robot_ws/install/path_planner_server/share/ament_index/resource_index/packages
+[5.070s] symbolically linking /home/samah/robot_ws/build/path_planner_server/package.xml -> /home/samah/robot_ws/install/path_planner_server/share/path_planner_server
+[5.070s] creating /home/samah/robot_ws/install/path_planner_server/share/path_planner_server/launch
+[5.070s] symbolically linking /home/samah/robot_ws/build/path_planner_server/launch/pathplanner.launch.py -> /home/samah/robot_ws/install/path_planner_server/share/path_planner_server/launch
+[5.070s] creating /home/samah/robot_ws/install/path_planner_server/share/path_planner_server/config
+[5.071s] symbolically linking /home/samah/robot_ws/build/path_planner_server/config/bt_navigator.yaml -> /home/samah/robot_ws/install/path_planner_server/share/path_planner_server/config
+[5.071s] symbolically linking /home/samah/robot_ws/build/path_planner_server/config/recovery.yaml -> /home/samah/robot_ws/install/path_planner_server/share/path_planner_server/config
+[5.071s] symbolically linking /home/samah/robot_ws/build/path_planner_server/config/planner_server.yaml -> /home/samah/robot_ws/install/path_planner_server/share/path_planner_server/config
+[5.071s] symbolically linking /home/samah/robot_ws/build/path_planner_server/config/controller.yaml -> /home/samah/robot_ws/install/path_planner_server/share/path_planner_server/config
+[5.072s] symbolically linking /home/samah/robot_ws/build/path_planner_server/config/behavior.xml -> /home/samah/robot_ws/install/path_planner_server/share/path_planner_server/config
+[5.132s] Invoked command in '/home/samah/robot_ws/build/path_planner_server' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/path_planner_server/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/path_planner_server/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/path_planner_server/build --no-deps symlink_data

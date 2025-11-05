@@ -1,0 +1,325 @@
+#include <util/atomic.h>
+
+
+//these for wheeel on the right
+#define ENCA 3 //yellow 
+#define ENCB 5 //green    no meaning for this, no int for pin 5
+#define IN1 9
+#define IN2 8
+#define PWM 10
+
+
+//these for wheel on the left
+
+#define ENCA_LEFT 2 //yellow 
+#define ENCB_LEFT 4 //green       no meaning for this, no int for pin 4  
+#define IN3_LEFT 6
+#define IN4_LEFT 7
+#define PWM_LEFT 11
+
+// globals
+long prevT = 0;
+long prevT_LEFT = 0;
+
+int posPrev = 0;
+int posPrev_LEFT = 0;
+// Use the "volatile" directive for variables
+// used in an interrupt
+volatile int pos_i = 0;
+volatile int pos_i_LEFT = 0;
+volatile float velocity_i = 0;
+volatile float velocity_i_LEFT = 0;
+volatile long prevT_i = 0;
+volatile long prevT_i_LEFT = 0;
+
+float v1Filt = 0;
+float v1Filt_LEFT = 0;
+float v1Prev = 0;
+float v1Prev_LEFT = 0;
+float v2Filt = 0;
+float v2Prev = 0;
+
+float eintegral = 0;
+float eintegral_LEFT = 0;
+
+
+ float vt = 0;//0.27 this is in m/s and equivelant to 80 RPM
+  float vt_LEFT =0;// 0.27 this is in m/s and equivelant to 80 RPM
+
+
+
+
+void setup() {
+  Serial.begin(115200);
+
+  pinMode(ENCA,INPUT);
+ // pinMode(ENCB,INPUT);
+  pinMode(PWM,OUTPUT);
+  pinMode(IN1,OUTPUT);
+  pinMode(IN2,OUTPUT);
+
+  attachInterrupt(digitalPinToInterrupt(ENCA),readEncoder,RISING);
+
+  pinMode(ENCA_LEFT,INPUT);
+ // pinMode(ENCB_LEFT,INPUT);
+  pinMode(PWM_LEFT,OUTPUT);
+  pinMode(IN3_LEFT,OUTPUT);
+  pinMode(IN4_LEFT,OUTPUT);
+
+  attachInterrupt(digitalPinToInterrupt(ENCA_LEFT),
+                  readEncoder_LEFT,RISING);
+
+
+        
+}
+
+
+
+
+ void loop() {
+
+
+
+  // read the position in an atomic block
+  // to avoid potential misreads
+  int pos = 0;
+  int pos_LEFT=0;
+  float velocity2 = 0;
+  float velocity2_LEFT = 0;
+  ATOMIC_BLOCK(ATOMIC_RESTORESTATE){
+    pos = pos_i;
+    velocity2 = velocity_i;
+    pos_LEFT=pos_i_LEFT;
+    velocity2_LEFT = velocity_i_LEFT;
+
+  }
+
+  // Compute velocity with method 1
+  long currT = micros();
+  float deltaT = ((float) (currT-prevT))/1.0e6;
+  float velocity1 = (pos - posPrev)/deltaT;
+  posPrev = pos;
+  prevT = currT;
+
+
+  long currT_LEFT = micros();
+  float deltaT_LEFT = ((float) (currT_LEFT-prevT_LEFT))/1.0e6;
+  float velocity1_LEFT = (pos_LEFT - posPrev_LEFT)/deltaT_LEFT;
+  posPrev_LEFT = pos_LEFT;
+  prevT_LEFT = currT_LEFT;
+
+
+  // // Convert count/s to RPM                  //turn right, 
+  // float v1 = velocity1/270.0*60.0;//4.899);   //238  //289 ,200
+ 
+  // float v1_LEFT = velocity1_LEFT/270.0*60.0;//4.899);    //289 //289  , 200
+
+
+  float v1 = (velocity1 / 400.0 * 60.0) * (vt >= 0 ? 1 : -1);
+float v1_LEFT = (velocity1_LEFT / 400.0 * 60.0) * (vt_LEFT >= 0 ? 1 : -1);
+
+
+
+
+  // Low-pass filter (25 Hz cutoff)
+  v1Filt = 0.854*v1Filt + 0.0728*v1 + 0.0728*v1Prev;
+  v1Prev = v1;
+  //v2Filt = 0.854*v2Filt + 0.0728*v2 + 0.0728*v2Prev;
+  //v2Prev = v2;
+  v1Filt_LEFT = 0.854*v1Filt_LEFT + 0.0728*v1_LEFT + 0.0728*v1Prev_LEFT;
+  v1Prev_LEFT = v1_LEFT;
+
+
+  // Set a target
+  // vt = 80;//0.27 this is in m/s and equivelant to 80 RPM
+  // vt_LEFT =80;// 0.27 this is in m/s and equivelant to 80 RPM
+
+
+static String lastInput = "0 0";  // Default values
+
+  // Check for serial input
+  if (Serial.available()) {
+    String input = Serial.readStringUntil('\n');
+    input.trim();
+
+    // Save and parse new input
+    if (input.length() > 0 && input.indexOf(' ') > 0) {
+      lastInput = input;
+    }
+  }
+
+  // Parse last valid input (whether new or reused)
+  int spaceIndex = lastInput.indexOf(' ');
+  if (spaceIndex > 0) {
+    String vtStr = lastInput.substring(0, spaceIndex);
+    String vtLeftStr = lastInput.substring(spaceIndex + 1);
+
+    vt = vtStr.toFloat();
+    vt_LEFT = vtLeftStr.toFloat();
+  }
+
+  static float last_vt = 0;
+static float last_vt_LEFT = 0;
+
+if (vt * last_vt < 0) {  // Sign flip
+  eintegral = 0;
+}
+if (vt_LEFT * last_vt_LEFT < 0) {
+  eintegral_LEFT = 0;
+}
+
+last_vt = vt;
+last_vt_LEFT = vt_LEFT;
+
+
+
+  
+
+
+
+  // Compute the control signal u
+  float kp = 1;
+  float ki = 4;
+  float e = vt-v1Filt;
+  eintegral = eintegral + e*deltaT;
+
+if (eintegral > 60) eintegral = 60;
+if (eintegral < -60) eintegral = -60;
+
+  float u = kp*e + ki*eintegral;
+
+
+  float kp_LEFT = 1;
+  float ki_LEFT = 4;
+
+  float e_LEFT=vt_LEFT-v1Filt_LEFT;
+  eintegral_LEFT=eintegral_LEFT+e_LEFT*deltaT_LEFT;
+
+
+if (eintegral_LEFT > 60) eintegral_LEFT = 60;
+if (eintegral_LEFT < -60) eintegral_LEFT = -60;
+
+
+  float u_LEFT = kp_LEFT*e_LEFT + ki_LEFT*eintegral_LEFT;
+
+// Anti-windup and control effort handling
+if (vt_LEFT == 0.0) {
+  eintegral_LEFT = 0.0;
+  u_LEFT = 0.0;  // Directly set output to 0
+}
+if (vt == 0.0) {
+  eintegral = 0.0;
+  u = 0.0;
+}
+
+
+  // Set the motor speed and direction
+  int dir = 1;
+  if(u==0){
+    dir=0;
+  }
+  if (u<0){
+    dir = -1;
+  }
+  int pwr = (int) fabs(u);
+  if(pwr > 255){
+    pwr = 255;
+  }
+
+int dir_LEFT = 1;
+  if (u_LEFT<0){
+    dir_LEFT = -1;
+  }
+  if (u_LEFT==0){
+    dir_LEFT = 0;
+  }
+  int pwr_LEFT = (int) fabs(u_LEFT);
+  if(pwr_LEFT > 255){
+    pwr_LEFT = 255;
+  }
+
+
+
+  //Serial.println(pwr);
+  setMotor(dir,pwr,PWM,IN1,IN2);
+  setMotor(dir_LEFT,pwr_LEFT,PWM_LEFT,IN3_LEFT,IN4_LEFT);
+
+
+
+
+  // Serial.print(vt);
+  // Serial.print(" ");
+  // Serial.print(vt_LEFT);
+  // Serial.print(" ");
+  // Serial.print(v1Filt);
+  // Serial.print(" ");
+  // Serial.print(v1Filt_LEFT);
+  // Serial.println();
+
+
+
+
+  Serial.print(v1Filt); Serial.print(","); Serial.println(v1Filt_LEFT);
+
+
+
+  delay(20);
+ }
+
+
+
+
+
+
+
+
+
+void setMotor(int dir, int pwmVal, int pwm, int in1, int in2){
+  analogWrite(pwm,pwmVal); // Motor speed
+  if(dir == 1){ 
+    // Turn one way
+    digitalWrite(in1,HIGH);
+    digitalWrite(in2,LOW);
+  }
+  else if(dir == -1){
+    // Turn the other way
+    digitalWrite(in1,LOW);
+    digitalWrite(in2,HIGH);
+  }
+  else{
+    // Or dont turn
+    digitalWrite(in1,LOW);
+    digitalWrite(in2,LOW);    
+  }
+}
+
+//right wheel 270
+
+void readEncoder(){
+ 
+  pos_i = pos_i + 1;
+
+  // Compute velocity with method 2
+  long currT = micros();
+  float deltaT = ((float) (currT - prevT_i))/1.0e6;
+  velocity_i = 1/deltaT;
+  prevT_i = currT;
+}
+
+
+void readEncoder_LEFT(){
+ 
+
+
+  pos_i_LEFT = pos_i_LEFT + 1;
+
+
+
+
+
+  // Compute velocity with method 2
+  long currT = micros();
+  float deltaT = ((float) (currT - prevT_i_LEFT))/1.0e6;
+  velocity_i_LEFT = 1/deltaT;
+  prevT_i_LEFT=currT;
+}

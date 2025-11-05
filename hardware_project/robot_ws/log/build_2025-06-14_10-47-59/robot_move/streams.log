@@ -1,0 +1,19 @@
+[0.836s] Invoking command in '/home/samah/robot_ws/src/robot_move': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/robot_move/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/robot_move/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_move build --build-base /home/samah/robot_ws/build/robot_move/build install --record /home/samah/robot_ws/build/robot_move/install.log --single-version-externally-managed install_data
+[1.111s] running egg_info
+[1.111s] creating ../../build/robot_move/robot_move.egg-info
+[1.132s] writing ../../build/robot_move/robot_move.egg-info/PKG-INFO
+[1.133s] writing dependency_links to ../../build/robot_move/robot_move.egg-info/dependency_links.txt
+[1.133s] writing entry points to ../../build/robot_move/robot_move.egg-info/entry_points.txt
+[1.133s] writing requirements to ../../build/robot_move/robot_move.egg-info/requires.txt
+[1.133s] writing top-level names to ../../build/robot_move/robot_move.egg-info/top_level.txt
+[1.134s] writing manifest file '../../build/robot_move/robot_move.egg-info/SOURCES.txt'
+[1.180s] reading manifest file '../../build/robot_move/robot_move.egg-info/SOURCES.txt'
+[1.180s] writing manifest file '../../build/robot_move/robot_move.egg-info/SOURCES.txt'
+[1.181s] running build
+[1.181s] running build_py
+[1.181s] creating /home/samah/robot_ws/build/robot_move/build
+[1.181s] creating /home/samah/robot_ws/build/robot_move/build/lib
+[1.181s] creating /home/samah/robot_ws/build/robot_move/build/lib/robot_move
+[1.181s] copying robot_move/read_vel_from_ard.py -> /home/samah/robot_ws/build/robot_move/build/lib/robot_move
+[1.191s] interrupted
+[1.210s] Invoked command in '/home/samah/robot_ws/src/robot_move' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/robot_move/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/robot_move/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_move build --build-base /home/samah/robot_ws/build/robot_move/build install --record /home/samah/robot_ws/build/robot_move/install.log --single-version-externally-managed install_data

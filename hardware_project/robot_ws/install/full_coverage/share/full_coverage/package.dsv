@@ -1,0 +1,9 @@
+source;share/full_coverage/hook/pythonpath.ps1
+source;share/full_coverage/hook/pythonpath.dsv
+source;share/full_coverage/hook/pythonpath.sh
+source;share/full_coverage/hook/ament_prefix_path.ps1
+source;share/full_coverage/hook/ament_prefix_path.dsv
+source;share/full_coverage/hook/ament_prefix_path.sh
+source;../../build/full_coverage/share/full_coverage/hook/pythonpath_develop.ps1
+source;../../build/full_coverage/share/full_coverage/hook/pythonpath_develop.dsv
+source;../../build/full_coverage/share/full_coverage/hook/pythonpath_develop.sh

@@ -1,0 +1,19 @@
+[1.768s] Invoking command in '/home/samah/robot_ws/build/localization_server': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/localization_server/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/localization_server/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/localization_server/build --no-deps symlink_data
+[2.512s] running develop
+[2.879s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[2.879s]   self.local_index = Environment(self.shadow_path + sys.path)
+[2.951s] running egg_info
+[3.018s] writing localization_server.egg-info/PKG-INFO
+[3.018s] writing dependency_links to localization_server.egg-info/dependency_links.txt
+[3.018s] writing entry points to localization_server.egg-info/entry_points.txt
+[3.019s] writing requirements to localization_server.egg-info/requires.txt
+[3.019s] writing top-level names to localization_server.egg-info/top_level.txt
+[3.103s] reading manifest file 'localization_server.egg-info/SOURCES.txt'
+[3.104s] writing manifest file 'localization_server.egg-info/SOURCES.txt'
+[3.151s] running build_ext
+[3.151s] Creating /home/samah/robot_ws/install/localization_server/lib/python3.12/site-packages/localization-server.egg-link (link to .)
+[3.152s] Installing initial_pose_pub script to /home/samah/robot_ws/install/localization_server/lib/localization_server
+[3.152s] 
+[3.153s] Installed /home/samah/robot_ws/build/localization_server
+[3.153s] running symlink_data
+[3.184s] Invoked command in '/home/samah/robot_ws/build/localization_server' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/localization_server/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/localization_server/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/localization_server/build --no-deps symlink_data

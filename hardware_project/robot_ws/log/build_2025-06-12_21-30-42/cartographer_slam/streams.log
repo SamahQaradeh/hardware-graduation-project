@@ -1,0 +1,17 @@
+[2.466s] Invoking command in '/home/samah/robot_ws/build/cartographer_slam': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/cartographer_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/cartographer_slam/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/cartographer_slam/build --no-deps symlink_data
+[3.458s] running develop
+[3.951s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[3.951s]   self.local_index = Environment(self.shadow_path + sys.path)
+[4.046s] running egg_info
+[4.126s] writing cartographer_slam.egg-info/PKG-INFO
+[4.126s] writing dependency_links to cartographer_slam.egg-info/dependency_links.txt
+[4.127s] writing requirements to cartographer_slam.egg-info/requires.txt
+[4.127s] writing top-level names to cartographer_slam.egg-info/top_level.txt
+[4.244s] reading manifest file 'cartographer_slam.egg-info/SOURCES.txt'
+[4.245s] writing manifest file 'cartographer_slam.egg-info/SOURCES.txt'
+[4.310s] running build_ext
+[4.311s] Creating /home/samah/robot_ws/install/cartographer_slam/lib/python3.12/site-packages/cartographer-slam.egg-link (link to .)
+[4.311s] 
+[4.312s] Installed /home/samah/robot_ws/build/cartographer_slam
+[4.312s] running symlink_data
+[4.357s] Invoked command in '/home/samah/robot_ws/build/cartographer_slam' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/cartographer_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/cartographer_slam/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/cartographer_slam/build --no-deps symlink_data

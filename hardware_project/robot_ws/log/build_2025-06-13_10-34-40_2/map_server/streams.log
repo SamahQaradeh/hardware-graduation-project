@@ -1,0 +1,17 @@
+[19.281s] Invoking command in '/home/samah/robot_ws/build/map_server': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/map_server/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/map_server/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/map_server/build --no-deps symlink_data
+[20.006s] running develop
+[21.888s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[21.888s]   self.local_index = Environment(self.shadow_path + sys.path)
+[21.985s] running egg_info
+[22.041s] writing map_server.egg-info/PKG-INFO
+[22.041s] writing dependency_links to map_server.egg-info/dependency_links.txt
+[22.041s] writing requirements to map_server.egg-info/requires.txt
+[22.041s] writing top-level names to map_server.egg-info/top_level.txt
+[22.127s] reading manifest file 'map_server.egg-info/SOURCES.txt'
+[22.143s] writing manifest file 'map_server.egg-info/SOURCES.txt'
+[22.191s] running build_ext
+[22.216s] Creating /home/samah/robot_ws/install/map_server/lib/python3.12/site-packages/map-server.egg-link (link to .)
+[22.218s] 
+[22.218s] Installed /home/samah/robot_ws/build/map_server
+[22.218s] running symlink_data
+[22.302s] Invoked command in '/home/samah/robot_ws/build/map_server' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/map_server/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/map_server/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/map_server/build --no-deps symlink_data

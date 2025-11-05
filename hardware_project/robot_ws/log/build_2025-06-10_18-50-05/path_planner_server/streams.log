@@ -1,0 +1,17 @@
+[1.787s] Invoking command in '/home/samah/robot_ws/build/path_planner_server': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/path_planner_server/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/path_planner_server/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/path_planner_server/build --no-deps symlink_data
+[2.508s] running develop
+[2.867s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[2.867s]   self.local_index = Environment(self.shadow_path + sys.path)
+[2.938s] running egg_info
+[2.995s] writing path_planner_server.egg-info/PKG-INFO
+[2.995s] writing dependency_links to path_planner_server.egg-info/dependency_links.txt
+[2.995s] writing requirements to path_planner_server.egg-info/requires.txt
+[2.995s] writing top-level names to path_planner_server.egg-info/top_level.txt
+[3.079s] reading manifest file 'path_planner_server.egg-info/SOURCES.txt'
+[3.080s] writing manifest file 'path_planner_server.egg-info/SOURCES.txt'
+[3.129s] running build_ext
+[3.129s] Creating /home/samah/robot_ws/install/path_planner_server/lib/python3.12/site-packages/path-planner-server.egg-link (link to .)
+[3.129s] 
+[3.129s] Installed /home/samah/robot_ws/build/path_planner_server
+[3.129s] running symlink_data
+[3.161s] Invoked command in '/home/samah/robot_ws/build/path_planner_server' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/path_planner_server/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/path_planner_server/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/path_planner_server/build --no-deps symlink_data

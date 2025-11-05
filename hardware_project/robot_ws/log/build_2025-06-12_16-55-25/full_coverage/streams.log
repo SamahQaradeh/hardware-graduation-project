@@ -1,0 +1,26 @@
+[2.578s] Invoking command in '/home/samah/robot_ws/build/full_coverage': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/full_coverage/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/full_coverage/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/full_coverage/build --no-deps symlink_data
+[3.566s] running develop
+[4.032s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[4.032s]   self.local_index = Environment(self.shadow_path + sys.path)
+[4.121s] running egg_info
+[4.122s] creating full_coverage.egg-info
+[4.196s] writing full_coverage.egg-info/PKG-INFO
+[4.197s] writing dependency_links to full_coverage.egg-info/dependency_links.txt
+[4.197s] writing entry points to full_coverage.egg-info/entry_points.txt
+[4.197s] writing requirements to full_coverage.egg-info/requires.txt
+[4.197s] writing top-level names to full_coverage.egg-info/top_level.txt
+[4.198s] writing manifest file 'full_coverage.egg-info/SOURCES.txt'
+[4.308s] reading manifest file 'full_coverage.egg-info/SOURCES.txt'
+[4.309s] writing manifest file 'full_coverage.egg-info/SOURCES.txt'
+[4.373s] running build_ext
+[4.374s] Creating /home/samah/robot_ws/install/full_coverage/lib/python3.12/site-packages/full-coverage.egg-link (link to .)
+[4.375s] Installing coverage_planner script to /home/samah/robot_ws/install/full_coverage/lib/full_coverage
+[4.375s] 
+[4.375s] Installed /home/samah/robot_ws/build/full_coverage
+[4.376s] running symlink_data
+[4.376s] creating /home/samah/robot_ws/install/full_coverage/share/ament_index
+[4.376s] creating /home/samah/robot_ws/install/full_coverage/share/ament_index/resource_index
+[4.376s] creating /home/samah/robot_ws/install/full_coverage/share/ament_index/resource_index/packages
+[4.376s] symbolically linking /home/samah/robot_ws/build/full_coverage/resource/full_coverage -> /home/samah/robot_ws/install/full_coverage/share/ament_index/resource_index/packages
+[4.377s] symbolically linking /home/samah/robot_ws/build/full_coverage/package.xml -> /home/samah/robot_ws/install/full_coverage/share/full_coverage
+[4.418s] Invoked command in '/home/samah/robot_ws/build/full_coverage' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/full_coverage/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/full_coverage/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/full_coverage/build --no-deps symlink_data

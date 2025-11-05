@@ -1,0 +1,3 @@
+[console_scripts]
+coverage_planner = full_coverage.coverage_planner:main
+visual = full_coverage.visualizer:main

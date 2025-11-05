@@ -1,0 +1,23 @@
+[2.768s] Invoking command in '/home/samah/robot_ws/build/cartographer_slam': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/cartographer_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/cartographer_slam/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/cartographer_slam/build --no-deps symlink_data
+[3.856s] running develop
+[4.366s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[4.366s]   self.local_index = Environment(self.shadow_path + sys.path)
+[4.466s] running egg_info
+[4.466s] creating cartographer_slam.egg-info
+[4.548s] writing cartographer_slam.egg-info/PKG-INFO
+[4.549s] writing dependency_links to cartographer_slam.egg-info/dependency_links.txt
+[4.549s] writing requirements to cartographer_slam.egg-info/requires.txt
+[4.549s] writing top-level names to cartographer_slam.egg-info/top_level.txt
+[4.549s] writing manifest file 'cartographer_slam.egg-info/SOURCES.txt'
+[4.671s] reading manifest file 'cartographer_slam.egg-info/SOURCES.txt'
+[4.672s] writing manifest file 'cartographer_slam.egg-info/SOURCES.txt'
+[4.741s] running build_ext
+[4.742s] Creating /home/samah/robot_ws/install/cartographer_slam/lib/python3.12/site-packages/cartographer-slam.egg-link (link to .)
+[4.742s] 
+[4.743s] Installed /home/samah/robot_ws/build/cartographer_slam
+[4.743s] running symlink_data
+[4.743s] creating /home/samah/robot_ws/install/cartographer_slam/share/cartographer_slam/launch
+[4.744s] symbolically linking /home/samah/robot_ws/build/cartographer_slam/launch/cartographer.launch.py -> /home/samah/robot_ws/install/cartographer_slam/share/cartographer_slam/launch
+[4.744s] creating /home/samah/robot_ws/install/cartographer_slam/share/cartographer_slam/config
+[4.744s] symbolically linking /home/samah/robot_ws/build/cartographer_slam/config/cartographer.lua -> /home/samah/robot_ws/install/cartographer_slam/share/cartographer_slam/config
+[4.786s] Invoked command in '/home/samah/robot_ws/build/cartographer_slam' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/cartographer_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/cartographer_slam/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/cartographer_slam/build --no-deps symlink_data

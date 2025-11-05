@@ -1,0 +1,17 @@
+[1.866s] Invoking command in '/home/samah/robot_ws/build/map_server': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/map_server/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/map_server/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/map_server/build --no-deps symlink_data
+[2.630s] running develop
+[3.006s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[3.006s]   self.local_index = Environment(self.shadow_path + sys.path)
+[3.081s] running egg_info
+[3.142s] writing map_server.egg-info/PKG-INFO
+[3.143s] writing dependency_links to map_server.egg-info/dependency_links.txt
+[3.143s] writing requirements to map_server.egg-info/requires.txt
+[3.143s] writing top-level names to map_server.egg-info/top_level.txt
+[3.231s] reading manifest file 'map_server.egg-info/SOURCES.txt'
+[3.232s] writing manifest file 'map_server.egg-info/SOURCES.txt'
+[3.283s] running build_ext
+[3.283s] Creating /home/samah/robot_ws/install/map_server/lib/python3.12/site-packages/map-server.egg-link (link to .)
+[3.283s] 
+[3.284s] Installed /home/samah/robot_ws/build/map_server
+[3.284s] running symlink_data
+[3.319s] Invoked command in '/home/samah/robot_ws/build/map_server' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/samah/robot_ws/build/map_server/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/samah/robot_ws/install/map_server/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/samah/robot_ws/build/map_server/build --no-deps symlink_data

@@ -1,0 +1,122 @@
+ros2 pkg list | grep static_layer
+
+
+
+
+
+
+
+
+how to run lidar package:
+---------------------------------------------------------------------
+export ROS_DOMAIN_ID=7
+source /opt/ros/jazzy/setup.bash
+cd ~/robot_ws/
+colcon build --symlink-install
+source ~/robot_ws/install/setup.bash
+sudo chmod 777/dev/ttyUSB0
+ros2 launch sllidar_ros2 view_sllidar_a1_launch.py
+_________________________________________________________________________________
+
+how to run robot move:
+---------------------------------------------------------------------
+export ROS_DOMAIN_ID=7
+cd ~/robot_ws/
+source /opt/ros/jazzy/setup.bash
+colcon build --packages-select robot_move
+source ~/robot_ws/install/setup.bash
+ros2 run robot_move obstacle_detector
+
+_________________________________________________________________________________
+
+to run the launch file we need:
+-------------------------------------------------------------------
+export ROS_DOMAIN_ID=7
+cd ~/robot_ws/
+source /opt/ros/jazzy/setup.bash
+colcon build --symlink-install
+source ~/robot_ws/install/setup.bash
+sudo chmod 777/dev/ttyUSB0
+sudo chmod 777/dev/ttyUSB1
+ros2 launch robot_move robot_move.launch.py
+______________________________________________________
+
+made shell
+all I have to do is run this 
+~/launch_robot_move.sh
+
+note for me: don't forget that you did this 
+sudo visudo
+added
+user ALL=(ALL) NOPASSWD: /bin/chmod
+so I don't write password each time I execute sudo chmod 
+
+
+
+
+
+
+
+
+colcon build --symlink-install --packages-select localization_server
+
+
+
+----------------
+How to launch the map in laptop:
+export ROS_DOMAIN_ID=7
+. ~/ros2_jazzy/install/local_setup.bash
+cd ~/robot_ws/
+colcon build --symlink-install --packages-select cartographer_slam
+source ~/robot_ws/install/setup.bash
+ros2 launch cartographer_slam cartographer.launch.py
+rviz2
+-----------------------------
+
+-----------------------------
+
+how to launch the urdf file:
+
+export ROS_DOMAIN_ID=7
+#we should source both (if you source just 1, it will not work)
+source /opt/ros/jazzy/setup.bash
+source ~/ros2_jazzy/install/local_setup.bash
+cd ~/robot_ws/
+colcon build --symlink-install
+source ~/robot_ws/install/setup.bash
+ros2 launch robot_description display.launch.py
+In RVI
+Set Fixed Frame to base_link.
+
+Click Add → RobotModel.
+
+Choose Description Source → Topic.
+
+Set Topic to /robot_description
+and add TF
+
+map shell
+~/map.sh
+-----------------------------------------------------------------
+save the map 
+export ROS_DOMAIN_ID=7
+cd ~/ros2_ws/src/map_sevz/config
+ros2 run nav2_map_server map_saver_cli -f room_area
+
+
+
+---------------
+run the localizer 
+export ROS_DOMAIN_ID=7
+cd ~/ros2_ws
+colcon build --packages-select localization_server
+source install/setup.bash
+ros2 launch localization_server localization.launch.py
+-----------------------
+ros2 action send_goal /navigate_to_pose nav2_msgs/action/NavigateToPose "{
+  pose: {
+    header: {frame_id: 'map'}, 
+    pose: {position: {x: 1.0, y: 0.0, z: 0.0}, orientation: {w: 1.0}}
+  }
+}"
+
